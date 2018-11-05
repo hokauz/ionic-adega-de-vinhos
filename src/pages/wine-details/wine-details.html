@@ -1,0 +1,72 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="delete(wine)">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding class="bg-primary">
+  <ion-row>
+    <ion-col class="custom-wine">
+      <ion-item no-lines (click)="openItemToEdit(wine, 'AddWinePage')">
+        <ion-avatar item-left class="wine-label">
+          <img src="{{ wine?.image | defaultImage: wine.type }}">
+        </ion-avatar>
+        <h1>{{wine.name}}</h1>
+        <ion-icon name="md-create" color="soft" item-right></ion-icon>
+      </ion-item>
+      
+      <ion-item (click)="openItemToEdit(wine, 'AddWineStep_2Page')">
+        <ion-icon class="{{ wine.type | defaultGlass }}" item-left></ion-icon>
+        <ion-label>Tipo</ion-label>
+        <p item-right>{{wine.type}}</p>
+        <ion-icon name="md-create" color="soft" item-right></ion-icon>
+      </ion-item>
+      
+      <ion-item (click)="openItemToEdit(wine, 'AddWineStep_3Page')">
+        <ion-icon class="wine-barrel" item-left></ion-icon>
+        <ion-label>Safra</ion-label>
+        <p item-right>{{ wine.harvest }}</p>
+        <ion-icon name="md-create" color="soft" item-right></ion-icon>
+      </ion-item>
+      
+      <ion-item (click)="openItemToEdit(wine, 'AddWineStep_4Page')">
+        <ion-icon class="wine-grape" item-left></ion-icon>
+        <ion-label>Uva</ion-label>
+        <p item-right>{{ wine.grape }}</p>
+        <ion-icon name="md-create" color="soft" item-right></ion-icon>
+      </ion-item>
+      
+      <ion-item (click)="openItemToEdit(wine, 'AddWineStep_5Page')">
+        <ion-icon name="ios-cube-outline" item-left></ion-icon>
+        <ion-label>Estoque</ion-label>
+        <p item-right>{{wine.stock}}</p>
+        <ion-icon name="md-create" color="soft" item-right></ion-icon>
+      </ion-item>
+
+      <ion-item (click)="openItemToEdit(wine, 'AddWineStep_6Page')">
+        <ion-icon name="ios-pin-outline" item-left></ion-icon>
+        <ion-label>País</ion-label>
+        <ion-avatar item-right>
+          <img src="{{ wine.country_iso | defaultFlag }}" class="flag">
+        </ion-avatar>
+        <ion-icon name="md-create" color="soft" item-right></ion-icon>
+      </ion-item>
+      
+      <ion-item no-lines (click)="openItemToEdit(wine, 'AddWineStep_7Page')">
+        <ion-icon name="ios-text-outline" item-left></ion-icon>
+        <ion-label>Descrição</ion-label>
+        <ion-icon name="md-create" color="soft" item-right></ion-icon>
+      </ion-item>
+
+      <ion-item no-lines>
+        <p class="description">{{wine.description}}</p>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

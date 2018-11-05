@@ -1,0 +1,27 @@
+page-modal-alert {
+  .bg-transparent {
+    background: transparent !important;
+  }
+  .scroll-content {
+    background-color: rgba(0,0,0,0.7);
+  }
+  .flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  .custom-card-alert {
+    align-self: center;
+    h2 {
+      @extend .color-primary;
+      font-size: 20px;
+      font-weight: 900;
+    }
+    border-radius: 10px;
+    width: 65%;
+  }
+  .button {
+    margin-bottom: 5px;
+  }
+}
