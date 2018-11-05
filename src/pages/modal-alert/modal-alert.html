@@ -1,0 +1,15 @@
+
+<ion-content padding class="bg-transparent">
+  <div class="flex-box">    
+    <ion-card class="custom-card-alert">
+      <ion-card-header>
+        <h2 text-wrap text-center>
+          {{ type.message }}
+        </h2>
+      </ion-card-header>
+      <ion-card-content>
+        <button ion-button block round small *ngFor="let option of type.options" [color]="option.color" (click)="action(option.action)">{{option.text}}</button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

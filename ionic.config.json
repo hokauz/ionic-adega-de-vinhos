@@ -1,5 +1,13 @@
 {
   "name": "adega-de-vinhos",
-  "integrations": {},
-  "type": "ionic-angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "http://lcboapi.com/"
+    }
+  ]
 }

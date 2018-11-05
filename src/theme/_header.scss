@@ -1,0 +1,18 @@
+.header {
+  .toolbar-background {
+    @extend .bg-primary;
+  }
+  .toolbar-title, .bar-button{
+    @extend .color-secondary;
+  }
+
+  &::after {
+    background-image: none !important;
+  }
+}
+
+.transparent {
+  .toolbar-background {
+    background: transparent;
+  }
+}

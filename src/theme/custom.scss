@@ -1,0 +1,54 @@
+$colors: (
+  primary   : #303451,
+  secondary : #b44c89,
+  ternary   : #3f4167,
+  quaternary: #1b2036,
+  danger    : #f53d3d,
+  light     : #f4f4f4,
+  soft      : #989cb5,
+  dark      : #222
+);
+
+@each $color, $code in $colors {
+  .color-#{$color} {
+    color: $code !important;
+  }
+
+  .bg-#{$color} {
+    background-color: $code !important;
+  }
+
+  .bor-t-#{$color} {
+    border-top: 0.55px solid $code;
+  }
+
+  .bor-b-#{$color} {
+    border-bottom: 0.55px solid $code;
+  }
+
+  .bor-l-#{$color} {
+    border-left: 0.55px solid $code;
+  }
+
+  .bor-r-#{$color} {
+    border-right: 0.55px solid $code;
+  }
+
+  .bor-#{$color} {
+    border: 0.55px solid $code;
+  }
+}
+
+@for $size from 10 to 30 {
+  .fs-#{$size} {
+    font-size: $size + 0px !important;
+  }
+}
+
+
+
+@import "fonts";
+@import "header";
+@import "search-bar";
+@import "items";
+

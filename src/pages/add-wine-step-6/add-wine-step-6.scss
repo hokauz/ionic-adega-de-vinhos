@@ -1,0 +1,38 @@
+page-add-wine-step-6 {
+.autocomplete {
+  width: 100%;
+  padding: 0 16px; 
+  background: transparent !important; 
+
+  .searchbar {
+    background: transparent !important; 
+    border: none;
+
+    .searchbar-input {
+      box-shadow        : none !important;
+      -webkit-box-shadow: none !important;
+      padding: 0;
+      font-size: 24px;
+    }
+  }
+	ion-searchbar {
+		padding: 1px !important;
+	}
+  .searchbar-search-icon { display:none; width:0; height:0; }
+
+
+	ion-list {
+		position: absolute;
+		width: inherit;
+		overflow-y: scroll;
+		max-height: 150%;
+		z-index: 999;
+
+    ion-avatar {
+      min-width: 25px;
+      min-height: 25px;
+    }
+		
+	}
+}
+}

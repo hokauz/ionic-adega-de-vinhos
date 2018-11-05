@@ -1,0 +1,73 @@
+.custom-item {
+  background: transparent;
+}
+
+.custom-item-add-wine {
+  .input-wrapper {
+    .label {
+      @extend .color-primary;
+      font-size: 20px;
+      max-width: 400px;
+      width    : 400px !important;
+      overflow : visible;
+      font-weight: 900;
+    }
+
+    .input {
+      @extend .color-soft;
+      font-size: 22px !important;
+    }
+  }
+}
+
+
+// Show the valid highlight when it has the .ng-valid class and a value
+.item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  // @include ios-input-highlight($text-input-ios-highlight-color-valid);
+  border-bottom-color: none !important;
+  border-color: #dedede !important;
+}
+
+.list-ios .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+.list-ios .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+  // @include ios-input-highlight($text-input-ios-highlight-color-valid);
+  border-bottom-color: none !important;
+  border-color: #dedede !important;
+  .item-inner {
+    box-shadow: none;
+  }
+}
+
+// Show the valid highlight when it has the .ng-valid class and a value
+// TODO remove all uses of input-has-focus in v4
+// TODO remove all uses of input-has-value in v4
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  // @include md-input-highlight($text-input-md-highlight-color-valid);
+  border-bottom-color: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none!important;
+  border-color: #dedede !important;
+  
+}
+
+.list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+  // @include md-input-highlight($text-input-md-highlight-color-valid);
+  border-bottom-color: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none!important;
+  border-color: #dedede !important;
+  
+
+  .item-inner {
+    box-shadow: none;
+  }
+}
+
+.ios {
+  .column-keyboard {
+    position: initial !important;
+  }
+}

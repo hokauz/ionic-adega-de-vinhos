@@ -1,0 +1,19 @@
+.custom-searchbar {
+  .searchbar-input {
+    box-shadow        : none !important;
+    -webkit-box-shadow: none !important;
+    background-color  : map-get($colors, ternary) !important;
+    color             : white !important;
+    border-radius     : 30px !important;
+
+  }
+    input::-webkit-input-placeholder {
+      color: white !important;
+    }
+    input:-moz-placeholder {
+      color: white !important;
+    }
+    input:-ms-input-placeholder { /* IE10+ */
+      color: white !important;
+    }
+}

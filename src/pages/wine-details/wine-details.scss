@@ -1,0 +1,51 @@
+page-wine-details {
+  .custom-wine {
+
+    .item:first-child {
+      margin-bottom: 20px;
+    }
+    .item {
+      @extend .custom-item;
+      
+  
+      .item-inner {
+        margin-left: 0;
+        border-color: map-get($colors , quaternary);
+      }
+      
+      .label {
+        @extend .color-soft;
+      }
+    }
+
+    .wine-label {
+      margin: 0;
+      img {
+        width: 100px;
+        height: 100px;
+        
+      }
+    }
+    h1, p {
+      @extend .color-secondary;
+    }
+
+    [class^="wine-glass-"] {
+      @extend .color-quaternary;
+      font-size: 2.6rem;
+    }
+  
+    .icon {
+      @extend .color-quaternary;
+      text-align: center;
+      font-size : 2.7rem;
+    }
+    .input {
+      @extend .color-light;
+    }
+
+    .description {
+      padding: 0 30px;
+    }
+  }
+}

@@ -1,3 +1,96 @@
-page-home {
+page-home { 
+  .progress-bar {
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: map-get($colors, secondary);
+  }
+  .custom-item {
+    background: transparent;
+  }
+  .custom-card {
 
+    border-bottom     : 0.55px solid map-get($colors, quaternary) !important; 
+    padding           : 0;
+    margin            : 0 10px;
+    box-shadow        : none;
+    -webkit-box-shadow: none; 
+    background        : transparent;
+
+    .card-content {
+      width  : inherit;
+      padding: 10px 0;
+    }
+
+    .wine-label {
+      // @extend .bg-light;
+      border-radius: 10px;
+
+    }
+    .circle {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+
+      // background-color: map-get($colors, ternary);
+      background: #303451; /* Old browsers */
+      background: -moz-linear-gradient(top, #303451 0%, #1b2036 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #303451 0%,#1b2036 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #303451 0%,#1b2036 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303451', endColorstr='#1b2036',GradientType=0 ); /* IE6-9 */
+
+      
+      left: 10px; 
+      top: 20px;
+      z-index: -1;
+      // bottom: 100px;
+      // left: 10px;
+
+      border-radius: 50%;
+    }
+    
+    h2 {
+      @extend .color-light;
+      margin-bottom: 4%;
+      font-size    : 1.8rem;
+      font-weight  : 500;
+    }
+
+    .icon-box {
+      display      : flex;
+      align-content:  center;
+      
+      [class^="wine-glass-"] {
+        @extend .color-quaternary;
+        font-size: 2.6rem;
+      }
+      .icon {
+        @extend .color-quaternary;
+        text-align: center;
+        font-size : 2.7rem;
+      }
+      span {
+        @extend .color-soft;
+        flex        : 1;
+        align-self  : center;
+        padding-left: 2%;
+        font-size   : 1.3rem;
+        font-weight: 500;
+      }
+    }
+
+    .chip {
+      @extend .bg-secondary;
+      @extend .color-light;
+      margin     : 0;
+      line-height: 20px;
+      height     : 20px;
+      font-size  : 14px;
+      font-weight: 500;
+    }
+    .flag {
+      position  : relative;
+      margin-top: -7px;
+    }
+  } // end item
 }
